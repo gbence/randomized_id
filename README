@@ -1,0 +1,23 @@
+RandomizedID
+============
+
+This plugin will give your models random generated primary keys in a simple and
+clean way.  Now it only supports single primary keys that is named `id`.
+
+Requirements and installation
+=============================
+
+It is based on ActiveRecord and mainly aims to provide Rails support so
+installing it as a plugin is the best way to install.  But you may use it
+whereever your model provides #count() and #before_create() class methods.
+
+Example
+=======
+
+  class YourClass < ActiveRecord::Base
+    include RandomizedID
+    ...
+  end
+
+
+Copyright (c) 2009 GOLDA Bence <gbence@algernon.hu>, released under the MIT license
