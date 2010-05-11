@@ -15,8 +15,8 @@ module RandomizedID
   module InstanceMethods
     def randomize_id
       id_candidate = rand(1<<31)
-      id_candidate = rand(1<<31) while self.class.count(:conditions => { :id => id_candidate }) > 0
-      self.id = id_candidate
+      id_candidate = rand(1<<31) while send(:class).count(:conditions => { :id => id_candidate }) > 0
+      write_attribute(:id, id_candidate)
     end
   end
 
