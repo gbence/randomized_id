@@ -7,7 +7,6 @@ module RandomizedID
     super
     base.class_eval do
       include InstanceMethods
-      # extend ClassMethods
       before_create :randomize_id
     end
   end
@@ -15,11 +14,8 @@ module RandomizedID
   module InstanceMethods
     def randomize_id
       id_candidate = rand(1<<31)
-      id_candidate = rand(1<<31) while send(:class).count(:conditions => { :id => id_candidate }) > 0
+      id_candidate = rand(1<<31) while send(:class).find(id_candidate)
       write_attribute(:id, id_candidate)
     end
   end
-
-  # module ClassMethods
-  # end
 end

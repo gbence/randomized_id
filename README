@@ -7,9 +7,10 @@ clean way.  Now it only supports single primary keys that is named `id`.
 Requirements and installation
 =============================
 
-It is based on ActiveRecord and mainly aims to provide Rails support so
-installing it as a plugin is the best way to install.  But you may use it
-whereever your model provides #count() and #before_create() class methods.
+It is based on ActiveRecord / ActiveModel and mainly aims to provide Rails
+support so installing it as a plugin is the best way to install.  But you may
+use it whereever your model provides #count() and #before_create() class
+methods.
 
 Example
 =======
@@ -20,4 +21,5 @@ Example
   end
 
 
-Copyright (c) 2009 GOLDA Bence <gbence@algernon.hu>, released under the MIT license
+Copyright (c) 2009--2010 GOLDA Bence <gbence@algernon.hu>, released under the
+MIT license
