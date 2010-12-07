@@ -25,7 +25,7 @@ PKG_FILES = FileList[
 
 spec = Gem::Specification.new do |s|
   s.name = "randomized_id"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.author = "Bence Golda"
   s.email = "golda@bitandpixel.hu"
   s.homepage = "http://bitandpixel.hu/"
